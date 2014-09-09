@@ -23,9 +23,84 @@ html {
 body {
   margin: 0;
   padding: 0;
+
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
 }
+  
 
 img {
   display: block;
   width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+figure{
+	position: relative;
+}
+
+figcaption{
+	position: absolute;
+	color:#FFF;
+	bottom: 0;
+	margin: 10px 10px 10px 10px;
+}
+
+
+	/*
+	We can use overflow hidden to force a parent element to wrap around all of its floated children.
+	Overflow hidden will cut off any boxes that extend outside the parent element;
+	if we want boxes to extend out of the element you can use .clearfix instead.
+	*/
+	/* overflow: hidden; */
+.wrapper h2{
+	font:Verdana, Geneva, sans-serif;
+	color:#CCC;
+}
+
+.left {
+	background-color: #fff;
+	padding: 1em;
+	float: left;
+	width: 30%;
+	/*box-sizing: border-box;*/
+}
+
+.middle {
+	background-color: #fff;
+	padding: 1em;
+	float: left;
+	width: 30%;
+	/*box-sizing: border-box;*/
+}
+
+.right {
+	background-color: #fff;
+	padding: 1em;
+	float: left;
+	width: 30%;
+	/*box-sizing: border-box;*/
+}
+
+
+/*
+
+Clearfix is another way to force a parent element to wrap around all its floated children.
+
+Just put this class on your HTML element that wraps around the floats.
+
+What this technique is doing, is creating an empty element after the parent element
+and telling that empty element to clear all the children.
+
+ */
+.clearfix:before,
+.clearfix:after {
+	content: "";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
 }
